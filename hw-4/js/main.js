@@ -1,9 +1,7 @@
-let userOperation = prompt ("Enter math operation from following: add, sub, mult or div:");
+const userOperation = prompt("Enter math operation from following: add, sub, mult or div:");
 
-let a = prompt("number 1:");
-let b = prompt("number 2:");
-a = Number(a);
-b = Number(b);
+const a = Number(prompt("number 1:"));
+const b = Number(prompt("number 2:"));
 
 switch (userOperation) {
     case "add":
