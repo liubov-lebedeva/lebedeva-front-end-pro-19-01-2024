@@ -1,0 +1,32 @@
+@import url(reset.css);
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.homeworks-list {
+    display: flex;
+    gap: 30px;
+}
+
+.homeworks-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    border: 2px solid black;
+    color: #103d43;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.homeworks-item a:hover {
+    color: white;
+    background: #103d43;
+}
+
+.home a {
+    color: #103d43;
+    background: #ffd07a;
+}
