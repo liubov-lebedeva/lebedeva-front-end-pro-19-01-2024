@@ -27,3 +27,20 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 alert(resultString);
+
+//forth task
+const primeNumber = Number(prompt("Input integer number:"));
+let numberIsPrime = true;
+for (let i = 2; i < Math.sqrt(primeNumber); i++) {
+    if (primeNumber % i === 0) {
+        numberIsPrime = false;
+        break;
+    }
+}
+if (numberIsPrime) {
+    resultString = "The number is prime";
+    alert(resultString);
+} else {
+    resultString = "The number is not prime";
+    alert(resultString);
+}
