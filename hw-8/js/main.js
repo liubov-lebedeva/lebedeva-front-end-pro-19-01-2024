@@ -17,3 +17,13 @@ for (let i = 10; i <= 100; i = i + 10) {
     resultString += dollarExchangeRate + " ";
 }
 alert(resultString);
+
+//third task
+const N = Number(prompt("Input integer number:"));
+resultString = "";
+for (let i = 1; i <= 100; i++) {
+    if (i ** 2 < N) {
+        resultString += i + " ";
+    }
+}
+alert(resultString);
