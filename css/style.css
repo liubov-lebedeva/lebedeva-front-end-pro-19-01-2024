@@ -19,6 +19,7 @@
     color: #103d43;
     border-radius: 30px;
     padding: 10px;
+    white-space: nowrap;
 }
 
 .homeworks-item a:hover {
