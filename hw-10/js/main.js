@@ -58,7 +58,7 @@ const users = [
 let phones = [];
 let totalBalance = 0;
 users.forEach((item) => {
-    item.balance = parseFloat(item.balance);
+    item.balance = +item.balance;
     totalBalance += item.balance;
     if (item.balance > 2000) {
         phones.push(item.phone);
