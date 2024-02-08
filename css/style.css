@@ -9,6 +9,7 @@
 .homeworks-list {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .homeworks-item a {
