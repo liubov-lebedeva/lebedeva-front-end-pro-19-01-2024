@@ -10,7 +10,7 @@ class Person {
 }
 
 class Car {
-    owner;
+    _owner;
 
     constructor(brand, model, year, number) {
         this.brand = brand;
@@ -19,9 +19,9 @@ class Car {
         this.number = number;
     }
 
-    setOwner(person) {
+    set owner(person) {
         if (person.age >= 18) {
-            this.owner = person;
+            this._owner = person;
         } else {
             console.log(`${person.name} is under 18`);
         }
@@ -29,8 +29,8 @@ class Car {
 
     printInfo() {
         console.log(`Brand: ${this.brand}, model: ${this.model}, production year: ${this.year}, car number: ${this.number}`);
-        if (this.owner) {
-            this.owner.printInfo();
+        if (this._owner) {
+            this._owner.printInfo();
         }
     }
 }
@@ -42,9 +42,9 @@ const michael = new Person('Michael', 18);
 const mers = new Car('Mercedes', 'E200', 2021, 'AA5667BN');
 const bmw = new Car('BMW', 'M3', 1988, 'AI6860NB');
 
-mers.setOwner(john);
+mers.owner = john;
 mers.printInfo();
-mers.setOwner(bush);
+mers.owner = bush;
 mers.printInfo();
-bmw.setOwner(michael);
+bmw.owner = michael;
 bmw.printInfo();
