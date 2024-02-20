@@ -23,8 +23,9 @@ class ApartmentHouse {
     addApartment(apartment) {
         if (this.apartments.length < this.maxAmount) {
             this.apartments.push(apartment);
+            return true;
         } else {
-            console.log("This apartment doesn't fit.");
+            return false;
         }
     }
 }
@@ -45,12 +46,22 @@ apartment2.addResident(bush);
 apartment2.addResident(michaela);
 apartment3.addResident(izzy);
 
-
-const apartmentHouse1 = new ApartmentHouse(3);
+const apartmentHouse1 = new ApartmentHouse(2);
 const apartmentHouse2 = new ApartmentHouse(0);
-apartmentHouse1.addApartment(apartment1);
-apartmentHouse1.addApartment(apartment2);
-apartmentHouse2.addApartment(apartment3);
 
-console.log(apartmentHouse1.apartments);
-console.log(apartmentHouse2.apartments);
+const apartments = [apartment1, apartment2, apartment3];
+const apartmentHouses = [apartmentHouse1, apartmentHouse2];
+
+let houseIndex = 0;
+let apartmentIndex = 0;
+
+while (apartmentIndex < apartments.length && houseIndex < apartmentHouses.length) {
+    let wasAdded = apartmentHouses[houseIndex].addApartment(apartments[apartmentIndex]);
+    if (wasAdded) {
+        apartmentIndex++;
+        console.log(`Apartment number ${apartmentIndex} was added to house number ${houseIndex}`);
+    } else {
+        console.log(`House number ${houseIndex} is full.`);
+        houseIndex++;
+    }
+}
