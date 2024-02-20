@@ -27,6 +27,10 @@ class Car {
         }
     }
 
+    get owner() {
+        return this._owner;
+    }
+
     printInfo() {
         console.log(`Brand: ${this.brand}, model: ${this.model}, production year: ${this.year}, car number: ${this.number}`);
         if (this._owner) {
@@ -48,3 +52,5 @@ mers.owner = bush;
 mers.printInfo();
 bmw.owner = michael;
 bmw.printInfo();
+
+console.log(mers.owner)
