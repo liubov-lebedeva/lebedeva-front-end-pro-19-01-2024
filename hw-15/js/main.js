@@ -20,7 +20,7 @@ class ApartmentHouse {
         this.maxAmount = maxAmount;
     }
 
-    addApartment(apartment) {
+    tryAddApartment(apartment) {
         if (this.apartments.length < this.maxAmount) {
             this.apartments.push(apartment);
             return true;
@@ -56,7 +56,7 @@ let houseIndex = 0;
 let apartmentIndex = 0;
 
 while (apartmentIndex < apartments.length && houseIndex < apartmentHouses.length) {
-    let wasAdded = apartmentHouses[houseIndex].addApartment(apartments[apartmentIndex]);
+    let wasAdded = apartmentHouses[houseIndex].tryAddApartment(apartments[apartmentIndex]);
     if (wasAdded) {
         apartmentIndex++;
         console.log(`Apartment number ${apartmentIndex} was added to house number ${houseIndex}`);
