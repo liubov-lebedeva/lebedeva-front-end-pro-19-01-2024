@@ -28,14 +28,14 @@ class Student {
     }
 
     present() {
-        if (this.attendance.length > this.attendanceIndex) {
+        if (this.attendanceIndex <= this.attendance.length) {
             this.attendance[this.attendanceIndex] = true;
             this.attendanceIndex++;
         }
     }
 
     absent() {
-        if (this.attendance.length > this.attendanceIndex) {
+        if (this.attendanceIndex <= this.attendance.length) {
             this.attendance[this.attendanceIndex] = false;
             this.attendanceIndex++;
         }
