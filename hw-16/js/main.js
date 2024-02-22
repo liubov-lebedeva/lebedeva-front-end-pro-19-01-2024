@@ -1,9 +1,9 @@
 class Student {
-    constructor(firstName, lastName, birthYear, grade) {
+    constructor(firstName, lastName, birthYear, grades) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthYear = birthYear;
-        this.grade = grade;
+        this.grades = grades;
         this.attendance = new Array(25);
         this.attendanceIndex = 0;
         this.minGradePointAverage = 90;
@@ -11,20 +11,20 @@ class Student {
     }
 
     getAge() {
-        return 2024 - this.birthYear;
+        return new Date().getFullYear() - this.birthYear;
     }
 
     getGradePointAverage() {
-        if (this.grade.length === 0) {
+        if (this.grades.length === 0) {
             return 0;
         }
         let gradesSum = 0;
         let gradeIndex = 0;
-        while (gradeIndex <= this.grade.length - 1) {
-            gradesSum += this.grade[gradeIndex];
+        while (gradeIndex <= this.grades.length - 1) {
+            gradesSum += this.grades[gradeIndex];
             gradeIndex++;
         }
-        return gradesSum / this.grade.length;
+        return gradesSum / this.grades.length;
     }
 
     present() {
