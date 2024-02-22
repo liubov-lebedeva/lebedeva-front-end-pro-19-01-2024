@@ -4,8 +4,9 @@ class Student {
         this.lastName = lastName;
         this.birthYear = birthYear;
         this.grades = grades;
-        this.attendance = new Array(25);
-        this.attendanceIndex = 0;
+        this.maxAttendancesAmount = 25;
+        this.attendances = new Array(this.maxAttendancesAmount);
+        this.attendancesAmount = 0;
         this.minGradePointAverage = 90;
         this.minAverageAttendance = 0.9;
     }
@@ -28,27 +29,27 @@ class Student {
     }
 
     present() {
-        if (this.attendanceIndex <= this.attendance.length) {
-            this.attendance[this.attendanceIndex] = true;
-            this.attendanceIndex++;
+        if (this.attendancesAmount < this.maxAttendancesAmount) {
+            this.attendances[this.attendancesAmount] = true;
+            this.attendancesAmount++;
         }
     }
 
     absent() {
-        if (this.attendanceIndex <= this.attendance.length) {
-            this.attendance[this.attendanceIndex] = false;
-            this.attendanceIndex++;
+        if (this.attendancesAmount < this.maxAttendancesAmount) {
+            this.attendances[this.attendancesAmount] = false;
+            this.attendancesAmount++;
         }
     }
 
     getAverageAttendance() {
         let visitsAmount = 0;
-        for (let visitIndex = 0; visitIndex < this.attendanceIndex; visitIndex++) {
-            if (this.attendance[visitIndex]) {
+        for (let visitIndex = 0; visitIndex < this.attendancesAmount; visitIndex++) {
+            if (this.attendances[visitIndex]) {
                 visitsAmount++;
             }
         }
-        return visitsAmount / this.attendanceIndex;
+        return visitsAmount / this.attendancesAmount;
     }
 
     summary() {
@@ -81,6 +82,19 @@ console.log(john.summary());
 
 const betty = new Student('Betty', 'Treal', 2000, [90, 100, 70, 80, 100, 100]);
 betty.absent();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
+betty.present();
 betty.present();
 betty.present();
 betty.present();
