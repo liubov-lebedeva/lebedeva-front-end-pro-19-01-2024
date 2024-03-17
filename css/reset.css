@@ -20,7 +20,7 @@ time, mark, audio, video, button {
     border: 0;
     font: inherit;
     font-size: 100%;
-    vertical-align: top;
+    vertical-align: center;
 }
 
 body {
