@@ -3,8 +3,8 @@ let getImage = (array) => {
     return `<img src="${array[randomNumber]}" alt="img">`;
 }
 
-let insertImage = (image)  => {
-    let div = document.querySelector("div.image");
+let insertImage = (image, divSelector)  => {
+    let div = document.querySelector(divSelector);
     div.innerHTML = image;
 }
 
@@ -16,7 +16,7 @@ for (let i = 0; i < 9; i++) {
 
 window.addEventListener('load', () => {
         let image = getImage(imagesArray);
-        insertImage(image);
+        insertImage(image, 'div.image');
     }
 );
 
