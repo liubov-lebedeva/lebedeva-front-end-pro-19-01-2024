@@ -31,3 +31,21 @@
     color: #103d43;
     background: #ffd07a;
 }
+
+.table-1, .table-2 {
+    width: 500px;
+    margin: 0 auto 50px;
+}
+
+table, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+}
+
+
