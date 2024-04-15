@@ -48,4 +48,20 @@ td {
     height: 50px;
 }
 
+.input {
+    border: 2px solid #103d43;
+    width: 300px;
+    height: 100px;
+}
+
+.ghost {
+    border: 2px solid #000;
+    width: 300px;
+    height: 100px;
+}
+
+.parent {
+    display: flex;
+    gap: 30px;
+}
 
